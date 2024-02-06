@@ -11,12 +11,16 @@ def validate_request(request: Request) -> GeneratePDFDocumentDTO:
     for param in ['cnpj', 'month', 'year']:
         if(data.get(param) is None):
             raise BadRequestException(f'Missing param {param}')
-        
-    return GeneratePDFDocumentDTO(
-        cnpj=str(data['cnpj']),
-        month=str(data['month']),
-        year=int(data['year'])
-    )
+    
+    try:
+        return GeneratePDFDocumentDTO(
+            cnpj=str(data['cnpj']),
+            month=str(data['month']),
+            year=int(data['year'])
+        )
+    except IndexError as ex:
+        raise BadRequestException(f'{ex}')
+
 
 class GeneratePDFController:
     def __init__(self) -> None:
@@ -27,7 +31,7 @@ class GeneratePDFController:
         pdf_data = emitter.get_pdf(model.cnpj, model.month, model.year) # type: ignore
         response = make_response(pdf_data)
         response.headers['Content-Type'] = 'application/pdf'
-        #response.headers['Content-Disposition'] = 'attachment'
+        response.headers['Content-Disposition'] = 'attachment'
         response.headers['Content-Disposition'] = 'inline'
         return response, 200
 
