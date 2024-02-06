@@ -1,5 +1,11 @@
-## Scrapping service to download documents on site:  
+[![](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-31013/)
+# DAS Emitter Scrapper
+Scrapping service to download documents on site:  
 https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app
+
+## Features
+* hCaptcha bypass
+* PDF automatic download
 
 ## Install
 Clone this repository, change the directory to ```~/das_emitter_scrapper``` and run:
