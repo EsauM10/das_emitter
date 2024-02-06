@@ -31,7 +31,7 @@ class GeneratePDFController:
         pdf_data = emitter.get_pdf(model.cnpj, model.month, model.year) # type: ignore
         response = make_response(pdf_data)
         response.headers['Content-Type'] = 'application/pdf'
-        response.headers['Content-Disposition'] = 'attachment'
+        #response.headers['Content-Disposition'] = 'attachment'
         response.headers['Content-Disposition'] = 'inline'
         return response, 200
 
