@@ -2,7 +2,7 @@
 https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app
 
 ## Install
-Clone this repository, change the directory to ```~/das_emitter_scapper``` and run:
+Clone this repository, change the directory to ```~/das_emitter_scrapper``` and run:
 ```
 pip install -r requirements.txt
 ```
