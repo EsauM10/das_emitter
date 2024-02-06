@@ -7,7 +7,11 @@ Scrapping service to download documents on site [PGMEI](https://www8.receita.faz
 * PDF automatic download
 
 ## Install
-Clone this repository, change the directory to ```~/das_emitter_scrapper``` and run:
+Clone this repository with:
+```
+git clone https://github.com/EsauM10/das_emitter_scrapper.git
+```
+Change the directory to ```~/das_emitter_scrapper``` and run:
 ```
 pip install -r requirements.txt
 ```
