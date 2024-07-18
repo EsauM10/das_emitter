@@ -1,2 +1,2 @@
 Flask
-undetected-chromedriver==3.5.4
+undetected-chromedriver
